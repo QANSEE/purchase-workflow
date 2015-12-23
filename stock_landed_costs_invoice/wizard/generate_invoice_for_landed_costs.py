@@ -75,8 +75,8 @@ class LandedCostGenerateInvoice(models.TransientModel):
             account = product.property_account_expense or \
                 product.categ_id.property_account_expense_categ
             account_id = account and account.id
-        assert account_id, 'You must configure the '
-        'expense account for the product %s' % product.name
+            assert account_id, 'You must configure the '
+            'expense account for the product %s' % product.name
         return account_id
 
     def prepare_inv_line(self,
