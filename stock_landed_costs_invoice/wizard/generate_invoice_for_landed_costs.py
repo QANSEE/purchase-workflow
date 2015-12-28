@@ -161,7 +161,7 @@ class LandedCostGenerateInvoice(models.TransientModel):
                     lines, partner_id=partner_id, journal_id=journal_id,
                     invoice_date=self.invoice_date)
                 invoice_ids.append(invoice_id)
-            self.invoice_creationg_hook()
+            #self.invoice_creationg_hook()
         domain = "[('id','in', [" + ','.join(map(str, invoice_ids)) + "])]"
         return {
             'domain': domain,
